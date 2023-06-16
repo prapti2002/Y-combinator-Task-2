@@ -127,8 +127,14 @@ app.put('/api/v1/clients/:id', (req, res) => {
 
   /* ---------- Update code below ----------*/
 
+const express = require('express');
+const app = express();
+const port = 3001;
 
+// Use body-parser middleware to parse JSON data
+app.use(express.json());
 
+<<<<<<< HEAD
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
@@ -137,6 +143,8 @@ const port = 3000;
 // Use body-parser middleware to parse JSON data
 app.use(bodyParser.json());
 
+=======
+>>>>>>> 604b17d389fde479349727c12e53355e1e5f78d0
 // Define API endpoint for updating client details
 app.put('/clients/:id', (req, res) => {
   const id = req.params.id;
@@ -151,7 +159,11 @@ app.put('/clients/:id', (req, res) => {
 // Start the server
 app.listen(port, () => {
   console.log(`Server listening on port ${port}.`);
+<<<<<<< HEAD
 })
 });
 
 
+=======
+});
+>>>>>>> 604b17d389fde479349727c12e53355e1e5f78d0
